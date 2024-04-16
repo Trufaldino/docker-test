@@ -1,0 +1,19 @@
+FROM python:3.9
+
+# Install cron
+RUN apt-get update && apt-get install -y cron
+
+# Copy the script into the container
+COPY 1.py /app/1.py
+
+# Set up cron job
+COPY cronjob_1 /etc/cron.d/cronjob_1
+
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/cronjob_1
+
+# Apply cron job
+RUN crontab /etc/cron.d/cronjob_1
+
+# Start cron in the foreground
+CMD ["cron", "-f"]

@@ -1,0 +1,52 @@
+version: '3'
+   
+services:
+  script1:
+    build:
+      context: .
+      dockerfile: Dockerfile.1
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    # Remove the cron property
+   
+  # script2:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.2
+  #   deploy:
+  #     replicas: 1
+  #     restart_policy:
+  #       condition: on-failure
+  #   # Remove the cron property
+   
+  # script3:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.3
+  #   deploy:
+  #     replicas: 1
+  #     restart_policy:
+  #       condition: on-failure
+  #   # Remove the cron property
+   
+  # script4:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.4
+  #   deploy:
+  #     replicas: 1
+  #     restart_policy:
+  #       condition: on-failure
+  #   # Remove the cron property
+
+  # script5:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.5
+  #   deploy:
+  #     replicas: 1
+  #     restart_policy:
+  #       condition: on-failure
+  #   # Remove the cron property
