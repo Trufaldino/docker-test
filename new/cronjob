@@ -1,0 +1,10 @@
+# Run 1.py at 12:00
+0 12 * * * python /scripts/1.py >> /var/log/cron.log 2>&1
+# Run 2.py at 13:00
+0 13 * * * python /scripts/2.py >> /var/log/cron.log 2>&1
+# Run 3.py at 14:00
+0 14 * * * python /scripts/3.py >> /var/log/cron.log 2>&1
+# Run 4.py at 15:00
+0 15 * * * python /scripts/4.py >> /var/log/cron.log 2>&1
+# Run 5.py at 16:00
+0 16 * * * python /scripts/5.py >> /var/log/cron.log 2>&1
